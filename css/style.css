@@ -292,3 +292,43 @@ a.review-badge{text-decoration:none}
 .intro-logo{width:min(460px,80vw);height:auto;opacity:0;animation:introUp .9s var(--ease) .15s forwards}
 .brand-logo{height:74px;width:auto;display:block}
 @media(max-width:620px){.brand-logo{height:56px}}
+
+/* --- Readability on the white theme: leftovers from the dark palette --- */
+.section--dark .sec-head p,.section--ink2 .sec-head p,.section--bone .sec-head p{color:#3a3e45}
+.about-copy p{color:#3a3e45}
+.checklist li{color:var(--txt-dark)}
+.trust-item{border-right-color:var(--line-dark)}
+.trust-item h3{color:var(--txt-dark)}
+.trust-item p{color:var(--txt-dark-dim)}
+#contact .contact-info .info-row{border-bottom-color:var(--line-dark)}
+#contact .contact-info .info-row .lbl{color:#5a5f68;font-weight:500}
+#contact .contact-info .info-row .val{color:var(--ink);font-weight:500}
+#contact .contact-info .info-row a.val:hover{color:var(--accent)}
+#contact .socials a{color:var(--ink);border-color:rgba(13,14,17,.18)}
+#contact .socials a:hover{color:#fff;background:var(--accent);border-color:var(--accent)}
+
+/* --- FAQ --- */
+[id]{scroll-margin-top:110px}
+.faq-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(34px,6vw,84px);align-items:start}
+.faq-head{position:sticky;top:130px;margin-bottom:0}
+.faq-head h2{font-size:clamp(2.4rem,5vw,3.6rem);color:var(--txt-dark)}
+.faq-head p{margin-bottom:26px}
+.faq-list{border-top:1.5px solid var(--ink)}
+.faq-item{border-bottom:1px solid var(--line-dark)}
+.faq-item summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 4px;
+  font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(1.35rem,2.2vw,1.65rem);line-height:1.15;color:var(--txt-dark);transition:color .25s}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary:hover{color:var(--accent-2)}
+.faq-item summary:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:6px}
+.faq-item summary i{position:relative;width:32px;height:32px;flex:0 0 auto;border-radius:50%;border:1.5px solid var(--ink);transition:background .25s,border-color .25s}
+.faq-item summary i::before,.faq-item summary i::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:1.5px;margin:-.75px 0 0 -5.5px;background:var(--ink);transition:transform .3s var(--ease),background .25s}
+.faq-item summary i::after{transform:rotate(90deg)}
+.faq-item[open] summary i{background:var(--accent);border-color:var(--accent)}
+.faq-item[open] summary i::before,.faq-item[open] summary i::after{background:#fff}
+.faq-item[open] summary i::after{transform:rotate(0)}
+.faq-a{padding:0 56px 24px 4px;color:#3a3e45;font-size:16px;max-width:62ch}
+.faq-a p{color:#3a3e45;margin:0}
+.faq-a a{color:var(--accent-2);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.faq-grid{grid-template-columns:1fr}.faq-head{position:static}}
+@media(max-width:640px){.faq-a{padding-right:4px}}
+@media(prefers-reduced-motion:reduce){.faq-item summary i::before,.faq-item summary i::after{transition:none}}
